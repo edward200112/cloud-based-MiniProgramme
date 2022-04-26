@@ -1,0 +1,80 @@
+.nickname{
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+  border-bottom: 2px solid #ff6781
+  
+}
+.face{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.container{
+  text-align: center;
+  margin: 90rpx 0 90rpx 50rpx;
+  width: 650rpx;
+  height: 250rpx;
+  line-height: 450rpx;
+  margin-top: 80px;
+}
+.homeBtn{
+  margin-top: 30rpx;
+  width: 70%;
+  color: #111;
+  background-color: #f9c6cf;
+  border-radius: 98rpx;
+   font-size: 35rpx;
+}
+
+/* ----------------------------- */
+.load{
+  background-color:#f9c6cf;
+  width: 100%;
+  height: 400rpx;
+  /*设置图片和文字垂直居中对齐*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.load image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.load text{
+  color:black;
+  margin-top: 40rpx;
+}
+.exit{
+  width: 40%;
+  margin-top: 40rpx;
+}
+
+.content{
+  padding: 30rpx;
+} 
+.usermotto {
+  margin-top: 200px;
+}
+.font1{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #111;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+}
+.btnImg {
+  width: 50rpx;
+  height: 50rpx;
+}

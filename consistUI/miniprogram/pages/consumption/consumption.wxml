@@ -1,0 +1,36 @@
+<!-- <van-notice-bar
+  left-icon="../../images/announcement.png"
+  text="开发好了，需要测试和完善，先测试下数据再弄!!!     开发好了，需要测试和完善，先测试下数据再弄"
+/>
+
+<image class="consumer" src="../../images/codeduck.jpg"></image>
+
+<view bindtap="clickInc" data-id = "{{item._id}}" data-idx = "{{index}}" class="row" wx:for="{{dataList}}" wx:key="index">
+  <view class = "title">{{index+1}}.{{item.title}}</view>
+  <view>点击量：{{item.hits}}</view>
+</view> -->
+
+<view  wx:if="{{!record}}" >
+  <!-- 判断是否有数据 -->
+  <van-empty description="暂无记录" />
+</view>
+
+<view  wx:if="{{record}}">
+  <view  wx:for="{{record}}" wx:key="_id">
+    <!-- <van-cell-group inset>
+      <van-cell title="{{item.operator_type === operatorType.COMPLETE_MISSION ? '完成了' : '兑换了'}}{{item.content}}"value="{{item.operator_type === operatorType.COMPLETE_MISSION ? '+' : '-'}}{{item.integral}}" label="{{item.operator_time}}" icon="point-gift"/>
+    </van-cell-group> -->
+     <view wx:if="{{item.operator_type === operatorType.COMPLETE_MISSION}}">
+      <van-cell-group inset>
+        <van-cell title="完成了{{item.content}}"value="{{item.operator_type === operatorType.COMPLETE_MISSION ? '+' : '-'}}{{item.integral}}" label="{{item.operator_time}}" icon="completed"/>
+      </van-cell-group>
+    <van-divider />
+    </view>
+    <view wx:else="{{item.operator_type === operatorType.EXCHANGE_REWARDS}}">
+      <van-cell-group inset>
+        <van-cell title="兑换了{{item.content}}"value="{{item.operator_type === operatorType.COMPLETE_MISSION ? '+' : '-'}}{{item.integral}}" label="{{item.operator_time}}" icon="point-gift-o"/>
+      </van-cell-group>
+     <van-divider />
+    </view>
+  </view>
+</view>

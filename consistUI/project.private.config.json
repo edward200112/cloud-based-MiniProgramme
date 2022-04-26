@@ -1,0 +1,150 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/getOpenId/index",
+          "pathName": "pages/getOpenId/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/deployService/index",
+          "pathName": "pages/deployService/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/selectRecord/index",
+          "pathName": "pages/selectRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sumRecordResult/index",
+          "pathName": "pages/sumRecordResult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecord/index",
+          "pathName": "pages/updateRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecordResult/index",
+          "pathName": "pages/updateRecordResult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecordSuccess/index",
+          "pathName": "pages/updateRecordSuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/msgPages/msgPages.index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mission/mission",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/demo7/demo7",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "超市",
+          "pathName": "pages/market/market",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "log",
+          "pathName": "pages/consumption/consumption",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "戴莫9",
+          "pathName": "pages/demo9/demo9",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "厚米",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/trea/trea",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/demo/demo",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}

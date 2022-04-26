@@ -1,0 +1,33 @@
+<!--未登录-->
+<view class="load" wx:if="{{!loginOk}}">
+<image src="../../images/home1.png" bindtap="load"></image>
+<!-- <text class="clickload" bindtap="loadByWechat">点击登录</text> -->
+<button open-type="getUserInfo" bindgetuserinfo='getUserProfile'>登录</button>
+</view>
+
+<!--已登录-->
+<view wx:else>
+<view class="load" >
+<image src="{{avatarUrl}}" ></image>
+<text class="clickload" >{{nickName}}</text>
+</view>
+
+<!--cell单元格存放信息-->
+<view class="content">
+  <van-cell-group>
+    <van-cell title="积分总数" value="123" size="large" icon="star"/>
+    <van-cell
+  is-link
+  title="积分使用详情"
+  link-type="navigateTo"
+  url="/pages/consumption/consumption"
+  icon="coupon"
+/>
+  </van-cell-group>
+</view>
+<!-- 推出按钮 -->
+<button class="exit" bindtap="exit" type="primary">退出登录</button>
+</view>
+
+
+

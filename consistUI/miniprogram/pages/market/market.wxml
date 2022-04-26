@@ -1,0 +1,34 @@
+<view wx:if="{{record}}">
+  <view wx:for="{{record}}" wx:key="_id">
+    <van-card
+      num="1"
+      tag="新品"
+      price="{{item.goods_integral}}"
+      desc="{{item.goods_content}}"
+      title="{{item.goods_name}}"
+      thumb="{{item.goods_image}}"
+    >
+      <view slot="footer">
+        <van-button id="{{item._id}}" size="mini"  bindtap="showMissionModal">兑换</van-button>
+        <van-button id="{{item._id}}" size="mini"  bindtap="deleteGoods">删除</van-button>
+        <!-- <van-button size="mini">按钮</van-button> -->
+      </view>
+    </van-card>
+  </view>
+</view>
+
+<view  style="align-items: center;">
+
+<navigator url="../addGoods/addGoods" open-type="navigate">
+<view class="newbtn" >
+  <van-button
+  type="primary" 
+  size="large"
+  plain
+  round
+  bindtap="showPopup"
+  >添加动力！</van-button>
+</view>
+</navigator>
+
+</view>

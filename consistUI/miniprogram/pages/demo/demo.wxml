@@ -1,0 +1,10 @@
+<view class='Popup' hidden='{{iShidden}}'>
+   <image src='../../images/codeduck.jpg'></image>
+   <view class='title'>授权提醒</view>
+   <view class='tip'>请授权头像等信息，以便为您提供更好的服务</view>
+   <view class='bottom flex'>
+      <view class='item' bindtap='close'>随便逛逛</view>
+       <button class='item grant theme-icon-color-yellow' wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 去授权 </button>
+       <button class='item grant theme-icon-color-yellow' wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 去授权 </button>
+   </view>
+</view>

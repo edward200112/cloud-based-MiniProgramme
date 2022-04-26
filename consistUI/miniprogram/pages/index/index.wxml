@@ -1,0 +1,107 @@
+<van-notice-bar
+  mode="closeable"
+  text="bug反馈写在留言板“用户反馈”中！！！ bug反馈写在留言板“bug反馈”中！！！"
+/>
+
+<view class="index_swiper">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">  
+      <swiper class = "sp" indicator-dots indicator-color="#fff" autoplay interval = "2000" circular next-margin 
+      style="width: 100%;">
+          <swiper-item>
+            <image wx:if='{undefined{customerLevel.value}}' src='./p1.jpg'></image>
+          </swiper-item>
+          <swiper-item>
+            <image wx:if='{undefined{customerLevel.value}}'  src="./p2.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image wx:if='{undefined{customerLevel.value}}'  src="./p3.jpg"></image>
+          </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>
+
+<view style="align-items: center;">
+<view class="container" style="margin: 10px 0 0 0;">
+    <view class="nowDate" style="float: left;padding-left: 8rpx;">今天是：{{nowDate}}，我们在一起<span style="font-weight: bold;color: rgb(218, 102, 121);">{{towDaysBetween}}</span>天啦！
+    <van-button id="sign_in_before" type="primary" size="mini" color="{{sign_in_color}}" bindtap="{{button_onclick}}">{{sign_in}}</van-button>
+
+      <view id="sign_in_before" class="button" style="float: right;background-color: {{sign_in_color}};"></view>
+    </view>
+    
+</view>
+</view>
+<!-- pages/index/index.wxml -->
+<!-- 新建按钮 -->
+<view class="newBtn" wx:if='{{authority}}'>
+  <van-button
+  type="primary" 
+  size="large"
+  plain
+  round
+  bindtap="showPopup"
+  >新建留言板</van-button>
+</view>
+<!-- <text class='remind' style="margin:30rpx">只有管理员才能新建留言板哦~</text> -->
+
+<van-divider 
+  contentPosition="center"
+  customStyle="color: #470024; border-color: #1989fa; font-size: 18px;"
+>
+尝试新建一个留言板吧~~
+</van-divider>
+
+
+<!-- 新建弹窗 -->
+<van-popup
+  show="{{ show }}" 
+  bind:close="onClose"
+  position="top"
+  custom-style="height: 50%;"
+  round
+  closeable
+ >
+  <form bindsubmit="onSubmit">
+    <view class="writeView">
+      <van-cell title="创建留言板"/>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 2em" 
+          placeholder="请输入页面标题" 
+          placeholder-style="color:gray;"
+          name="pageName"/>
+      </view>
+      <view class="textArea">
+        <textarea
+          value="{{textValue}}"
+          style="height: 3em" 
+          placeholder="请输入页面描述" 
+          placeholder-style="color:gray;"
+          name="pageDiscribe"/>
+      </view>
+    </view>
+    <view class='submitBtnView'>
+      <button type="primary" formType="submit" plain="true">确认</button>
+    </view>
+  </form>
+</van-popup>
+
+<!-- 页面列表 -->
+<van-skeleton
+  title
+  row="10"
+  loading="{{loading}}"
+>
+  <navigator url="../msgPages/msgPages?id=e8b1b114-58b6-4f8a-9a93-faa7ef17d369">
+    <van-cell title="留言板 Test" label="这是测试用的留言板，所有人都可见~ 普通用户只能添加留言，管理员可以回复、置顶、删除留言~"
+/>
+  </navigator>
+  <!-- <block wx:for='{{pageList}}' wx:key="_id" wx:if='{{authority}}'>  -->
+    <block wx:for='{{pageList}}' wx:key="_id"> 
+    <navigator url="../msgPages/msgPages?id={{item._id}}">
+      <van-cell title="{{item.name}}" label="{{item.discribe}}"/>
+    </navigator>
+  </block>
+</van-skeleton>

@@ -1,0 +1,25 @@
+<!-- <view>
+  <van-dialog id="van-dialog" />
+</view> -->
+
+
+<view>
+  <van-cell-group>
+  <van-field
+    value="{{ message }}"
+    label="连接"
+    type="textarea"
+    placeholder="{{link}}"
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+</view>
+
+<button class="btn" bindtap="copy" data-item="{{link}}">点击此处一键复制</button>
+
+
+
+<!-- <view>
+<view bindtap="copy" data-item='{{link}}'>点击这9个文字复制</view>
+</view> -->

@@ -1,0 +1,46 @@
+<!--未登录-->
+<view class="load" wx:if="{{!loginOk}}">
+<image src="../../images/home1.png" bindtap="load"></image>
+<!-- <text class="clickload" bindtap="loadByWechat">点击登录</text> -->
+<button  bindtap="getUserProfile">登录</button>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+</view>
+
+
+<!--已登录-->
+<view wx:else>
+<view class="load" >
+<image src="{{avatarUrl}}" ></image>
+<text class="clickload" >{{nickName}}</text>
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+</view>
+
+<!--cell单元格存放信息-->
+<view class="content">
+  <van-cell-group>
+    <van-cell title="积分总数" value="{{credit}}" size="large" icon="star"/>
+    <van-cell
+  is-link
+  title="积分使用详情"
+  link-type="navigateTo"
+  url="/pages/consumption/consumption"
+  icon="coupon"
+/>
+  </van-cell-group>
+</view>
+<!-- 推出按钮 -->
+<button class="exit" bindtap="exit" type="primary">退出登录</button>
+
+
+<button class='font1' bindtap="downPdf">
+    <image class='btnImg' src='../../images/treasure.png'></image>
+    <view>隐藏宝藏</view>
+</button>
+
+</view>
+
+
+
+
+

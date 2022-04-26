@@ -1,0 +1,37 @@
+/* pages/index/index.wxss */
+.newBtn{
+  width: 90%;
+  height: 100rpx;
+  margin:5%;
+  margin-bottom: 2%;
+}
+.remind{
+  display: flex;
+  justify-content: center;  
+  color: rgb(153, 153, 153);
+  font-size: 25rpx;
+  width: 90%;
+}
+.textArea{
+  background-color: #F6F6F6;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  box-sizing: content-box;
+  padding: 20rpx;
+  position: relative;
+}
+.submitBtnView{
+  margin: 20rpx;
+}
+.container{
+  margin-top: 30rpx;
+  padding-left: 35rpx;
+  padding-bottom: 20rpx; 
+}
+.sp image{
+  width: 100%;
+}
+.index_swiper swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
